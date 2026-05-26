@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-popx-text-dark selection:bg-popx-purple selection:text-white;
+  }
+}
+
+/* Custom premium styles for mobile card frame presentation on desktop */
+.mobile-card-container {
+  box-shadow: 0 10px 40px -10px rgba(108, 37, 232, 0.12), 0 0 0 1px rgba(108, 37, 232, 0.05);
+}
+
+/* Smooth input label floating text style */
+.popx-input-group {
+  position: relative;
+}
+
+/* Add custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar for beautiful UI inside mobile frame */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 37, 232, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 37, 232, 0.4);
+}
